@@ -35,7 +35,7 @@ default:
 }
 
 enum TestEnum{
-    case TEST1, TEST2, TEST3
+    case TEST1, TEST2, TEST3, TEST4
 }
 
 var enumTest = TestEnum.TEST1
@@ -50,4 +50,21 @@ case .TEST3:
 default:
     print("I don't know what value enumTest has")
 }
+
+// Switch Statement - INterval Matching
+var testInput = 62
+var year : String
+switch testInput {
+case 0..<30:
+    year = "Freshmen"
+case 30..<60:
+    year = "Sophomore"
+case 60..<90:
+    year = "Junior"
+case 90...150:
+    year = "Senior"
+default:
+    year = "Undefined"
+}
+print("Student is \(year). Credit hour: \(testInput)")
 //: [Next](@next)
